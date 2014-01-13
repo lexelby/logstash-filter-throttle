@@ -144,7 +144,7 @@ class LogStash::Filters::Throttle < LogStash::Filters::Base
   # value is reached. It is recommended to leave the default value and ensure that your 
   # key_field is selected such that it limits the number of counters required (i.e. don't 
   # use UUID as the key_field!)
-  config :max_counters, :validate => :string, :default => 100000, :required => false
+  config :max_counters, :validate => :number, :default => 100000, :required => false
 
   # Performs initialization of the filter.
   public
